@@ -33,11 +33,11 @@ class Carnivore extends Animal {
       } else {
         animals.health = 0;
 
-        for (const i in Animal.alive) {
-          if (Animal.alive[i] === animals) {
-            Animal.alive.splice(i, 1);
-          }
-        }
+        Animal.alive.
+        filter((animal) => {
+          return animal !== animals;
+        })
+
       }
     }
   }
